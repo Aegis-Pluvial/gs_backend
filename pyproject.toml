@@ -1,0 +1,37 @@
+[project]
+name = "gs-backend"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "joaovitorpiccolo",email = "joaovitorpiccolo015@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13,<4.0"
+dependencies = [
+    "fastapi (>=0.115.12,<0.116.0)"
+]
+
+[tool.poetry]
+packages = [{include = "gs_backend", from = "src"}]
+
+[tool.pytest.ini_options]
+pythonpath = '.'
+addopts = '-p no:warnings'
+
+
+[tool.poetry.group.dev.dependencies]
+pydantic-settings = "^2.9.1"
+pytest = "^8.4.0"
+pytest-cov = "^6.1.1"
+taskipy = "^1.14.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+run = 'fastapi dev src/gs_backend/main.py --port 8000'
+run_lan = 'fastapi dev src/gs_backend/main.py --host 0.0.0.0'
+test = 'pytest --cov=src/gs_backend -vv'
+htmlcov = 'start "C:\Users\janj\AppData\Local\Programs\Opera GX\opera.exe" C:\Users\janj\gs_backend\htmlcov\index.html'
+post_test = 'coverage html'

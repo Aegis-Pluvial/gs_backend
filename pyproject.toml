@@ -9,7 +9,8 @@ readme = "README.md"
 requires-python = ">=3.13,<4.0"
 dependencies = [
     "fastapi[standard] (>=0.115.12,<0.116.0)",
-    "httpx (>=0.28.1,<0.29.0)"
+    "httpx (>=0.28.1,<0.29.0)",
+    "sqlalchemy (>=2.0.41,<3.0.0)"
 ]
 
 [tool.poetry]
@@ -36,4 +37,6 @@ run_lan = 'fastapi dev src/gs_backend/main.py --host 0.0.0.0'
 test = 'pytest --cov=src/gs_backend -vv'
 htmlcov = 'start "C:\Users\janj\AppData\Local\Programs\Opera GX\opera.exe" C:\Users\janj\gs_backend\htmlcov\index.html'
 post_test = 'coverage html'
+devpush = "git push -u origin dev"
+mainpush = "git push -u origin main"
 scrape = 'python src/webscrapping/main.py'

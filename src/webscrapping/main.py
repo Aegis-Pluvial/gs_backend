@@ -1,22 +1,23 @@
 from gs_backend.settings import Settings
-import urllib.request
-import json
+from urllib.request import urlopen
+from urllib.parse import quote
+from json import loads
 
-api_key = Settings.api_key
-query = "enchente"  # Pode usar multiplas palavras, exemplos: Apple iPhone
-url = f"https://gnews.io/api/v4/search?q={query}&lang=pt-BR&country=br&max=10&apikey={api_key}"
+api_key = Settings().api_key
+query = quote(
+    ('"enchente" AND ("mortes" OR "vítimas" OR "pessoas afetadas" OR "desabrigados" OR "danos" OR "prejuízo" OR '
+     '"dinheiro público OR R$ OR dinheiro")'))
 
-with urllib.request.urlopen(url) as response:
-    data = json.loads(response.read().decode("utf-8"))
+url = f"https://gnews.io/api/v4/search?q={query}&lang=pt-BR&country=br&min=10&sortby=publishedAt&apikey={api_key}"
+
+with urlopen(url) as response:
+    data = loads(response.read().decode("utf-8"))
     articles = data["articles"]
 
     for i in range(len(articles)):
-        # articles[i].title
-        print(f"Title: {articles[i]['title']}")
-        # articles[i].description
-        print(f"Description: {articles[i]['description']}")
-        break
-        # You can replace {property} below with any of the article properties returned by the API.
-        # articles[i].{property}
-        # print(f"{articles[i]['{property}']}")
-        # Delete this line to display all the articles returned by the request. Currently only the first article is displayed.
+        print(f"{i + 1}) Title: {articles[i]['title']}")
+        print(f"{i + 1}) Description: {articles[i]['description']}")
+        print(f"{i + 1}) Content: {articles[i]['content']}")
+        print()
+        print(f"{i + 1}) Publish Date: {articles[i]['publishedAt']}")
+        print('================================================')

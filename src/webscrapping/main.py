@@ -3,8 +3,6 @@ from urllib.request import urlopen
 from urllib.parse import quote
 from json import loads
 from datetime import datetime, timezone
-from webscrapping.utils import get_lastDate
-from webscrapping.utils import get_articles
 from webscrapping.utils import add_article
 from gs_backend.database import get_session
 

@@ -39,4 +39,4 @@ htmlcov = 'start "C:\Users\janj\AppData\Local\Programs\Opera GX\opera.exe" C:\Us
 post_test = 'coverage html'
 devpush = "git push -u origin dev"
 mainpush = "git push -u origin main"
-scrape = 'python src/webscrapping/main.py'
+scrap = 'python src/webscrapping/main.py'

@@ -5,9 +5,13 @@ class Message(BaseModel):
     message: str
 
 
-class Articles(BaseModel):
+class Article(BaseModel):
+    title: str
     url: str
+    published_at: str
+    description: str
 
 
 class ArticlesList(BaseModel):
-    article: list[Articles]
+    article: list[Article]
+

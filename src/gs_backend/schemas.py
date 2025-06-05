@@ -3,3 +3,11 @@ from pydantic import BaseModel
 
 class Message(BaseModel):
     message: str
+
+
+class Articles(BaseModel):
+    url: str
+
+
+class ArticlesList(BaseModel):
+    article: list[Articles]

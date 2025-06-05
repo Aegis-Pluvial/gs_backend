@@ -1,5 +1,6 @@
 ### dotenv template
 .env
+create_db.py
 
 ### Database template
 *.accdb

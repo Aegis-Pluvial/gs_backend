@@ -1,7 +1,7 @@
 import os
 from fastapi import FastAPI, Depends, Request
 from fastapi.staticfiles import StaticFiles
-from webscrapping.utils import change_statusDB
+from webscrapping.utils import change_statusDB, get_status_death, get_status_money
 from gs_backend.schemas import Message, ArticlesList, StatusChange
 from gs_backend.database import get_session
 from gs_backend.models import ArticleDB, AlarmDB
@@ -22,8 +22,10 @@ templates = Jinja2Templates(directory=os.path.abspath(static_dir))
 
 
 @app.get('/home/', response_class=HTMLResponse)
-def index(request: Request):
-    context = {'request': request}
+def index(request: Request, session = Depends(get_session)):
+    context = {'request': request, "deaths": get_status_death(session=session),
+               "money": get_status_money(session=session)
+               }
     return templates.TemplateResponse("index.html", context)
 
 @app.get('/home/quiz', response_class=HTMLResponse)

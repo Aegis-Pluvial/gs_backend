@@ -23,8 +23,11 @@ def add_article(article, session: Session):
 
 
 def add_status(session: Session, status: list):
-    status_db = StatusDB(deaths=status[1]['pessoas_mortas'], money=status[0]['dinheiro_publico'])
-    session.add(status_db)
+    deaths = status[1]['pessoas_mortas']
+    money = status[0]['dinheiro_publico']
+    status_db = session.scalar(select(StatusDB).where(StatusDB.id == 1))
+    status_db.deaths = deaths
+    status_db.money = money
     session.commit()
     session.refresh(status_db)
 
@@ -34,3 +37,15 @@ def change_statusDB(session: Session, status: StatusChange):
     status_db.status = status.change_status
     session.commit()
     session.refresh(status_db)
+
+def get_status_death(session: Session):
+    data = session.scalar(select(StatusDB.deaths))
+    data = str(data)
+    return data
+
+def get_status_money(session: Session):
+    data = session.scalar(select(StatusDB.money))
+    data = str(data)
+    return data
+
+

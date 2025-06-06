@@ -2,9 +2,8 @@ from gs_backend.settings import Settings
 from urllib.request import urlopen
 from urllib.parse import quote
 from json import loads
-from webscrapping.utils import add_article
+from webscrapping.utils import add_article,check_article
 from gs_backend.database import get_session
-from webscrapping.utils import check_article
 
 session = next(get_session())
 api_key = Settings().api_key

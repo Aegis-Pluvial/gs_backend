@@ -1,7 +1,8 @@
 # GS Backend
 
-Backend para gerenciamento de artigos, webscraping e API RESTful.
+Backend para O Site Aegis-Pluvial. 
 
+Atualização em Tempo Real Gerenciamento de artigos, webscraping e API RESTful.
 ## Estrutura do Projeto
 
 ```

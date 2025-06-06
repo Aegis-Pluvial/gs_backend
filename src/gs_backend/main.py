@@ -27,7 +27,7 @@ def index(request: Request):
     return templates.TemplateResponse("index.html", context)
 
 @app.get('/home/quiz', response_class=HTMLResponse)
-def index(request: Request):
+def quiz(request: Request):
     context = {'request': request}
     return templates.TemplateResponse("pages/quiz.html", context)
 

@@ -116,8 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
 let corPadrao = "#e2e1de";
 const imgPadrao = document.getElementById("mudar-imagem");
 const botaoMudarCor = document.getElementById('mudar-cor');
-const iconeSol = "./src/assets/Sol.png";
-const iconeLua = "./src/assets/Lua.png";
+const iconeSol = "/static/src/assets/Sol.png";
+const iconeLua = "/static/src/assets/Lua.png";
 
 
 function mudarTema() {

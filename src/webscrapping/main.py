@@ -2,7 +2,7 @@ from gs_backend.settings import Settings
 from urllib.request import urlopen
 from urllib.parse import quote
 from json import loads
-from webscrapping.utils import add_article,check_article
+from webscrapping.utils import add_article, check_article, add_status
 from gs_backend.database import get_session
 
 session = next(get_session())

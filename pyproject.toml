@@ -1,82 +1,74 @@
-[project]
+[tool.poetry]
 name = "gs-backend"
 version = "0.1.0"
 description = ""
-authors = [
-    { name = "joaovitorpiccolo", email = "joaovitorpiccolo015@gmail.com" }
-]
+authors = ["joaovitorpiccolo <joaovitorpiccolo015@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.13,<4.0"
-dependencies = [
-    "fastapi==0.115.12",
-    "email-validator>=2.0.0",
-    "dnspython>=2.0.0",
-    "idna>=2.0.0",
-    "fastapi-cli>=0.0.5",
-    "rich-toolkit>=0.11.1",
-    "click>=7.0",
-    "colorama>=0.4",
-    "rich>=13.7.1",
-    "markdown-it-py>=2.2.0",
-    "mdurl>=0.1,<1.0",
-    "pygments>=2.13.0,<3.0.0",
-    "typing-extensions>=4.12.2",
-    "typer>=0.12.3",
-    "shellingham>=1.3.0",
-    "uvicorn>=0.15.0",
-    "h11>=0.8",
-    "httptools>=0.6.3",
-    "python-dotenv>=0.13",
-    "pyyaml>=5.1",
-    "uvloop>=0.15.1",
-    "watchfiles>=0.13",
-    "anyio>=3.0.0",
-    "sniffio>=1.1",
-    "websockets>=10.4",
-    "httpx==0.28.1",
-    "certifi",  # Sem versão definida
-    "httpcore==1.*",
-    "jinja2>=3.1.5",
-    "markupsafe>=2.0",
-    "pydantic>=2.0.0,<3.0.0",
-    "annotated-types>=0.6.0",
-    "pydantic-core==2.33.2",
-    "typing-inspection>=0.4.0",
-    "python-multipart>=0.0.18",
-    "starlette>=0.40.0,<0.47.0",
-    "mycli==1.31.2",
-    "cli-helpers>=2.2.1",
-    "configobj>=5.0.5",
-    "tabulate>=0.9.0",
-    "wcwidth",  # Sem versão definida
-    "cryptography>=1.0.0",
-    "cffi>=1.14",
-    "pycparser",  # Sem versão definida
-    "prompt-toolkit>=3.0.6,<4.0.0",
-    "pyaes>=1.6.1",
-    "pyfzf>=0.3.1",
-    "pyperclip>=1.8.1",
-    "sqlglot>=5.1.3",
-    "sqlparse>=0.3.0,<0.6.0",
-    "openai==1.84.0",
-    "distro>=1.7.0,<2",
-    "jiter>=0.4.0,<1",
-    "tqdm>4",
-    "pydantic-settings==2.9.1",
-    "pymysql==1.1.1",
-    "sqlalchemy==2.0.41",
-    "greenlet>=1",
-    "mslex>=1.1.0,<2.0.0",
-    "psutil>=5.7.2,<7",
-    "tomli>=2.0.1,<3.0.0"
-]
-
-[tool.poetry]
 packages = [{ include = "gs_backend", from = "src" }]
 
-[tool.pytest.ini_options]
-pythonpath = "."
-addopts = "-p no:warnings"
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+fastapi = "==0.115.12"
+email-validator = ">=2.0.0"
+dnspython = ">=2.0.0"
+idna = ">=2.0.0"
+fastapi-cli = ">=0.0.5"
+rich-toolkit = ">=0.11.1"
+click = ">=7.0"
+colorama = ">=0.4"
+rich = ">=13.7.1"
+markdown-it-py = ">=2.2.0"
+mdurl = ">=0.1,<1.0"
+pygments = ">=2.13.0,<3.0.0"
+typing-extensions = ">=4.12.2"
+typer = ">=0.12.3"
+shellingham = ">=1.3.0"
+uvicorn = ">=0.15.0"
+h11 = ">=0.8"
+httptools = ">=0.6.3"
+python-dotenv = ">=0.13"
+pyyaml = ">=5.1"
+uvloop = ">=0.15.1"
+watchfiles = ">=0.13"
+anyio = ">=3.0.0"
+sniffio = ">=1.1"
+websockets = ">=10.4"
+httpx = "==0.28.1"
+certifi = "*"
+httpcore = "==1.*"
+jinja2 = ">=3.1.5"
+markupsafe = ">=2.0"
+pydantic = ">=2.0.0,<3.0.0"
+annotated-types = ">=0.6.0"
+pydantic-core = "==2.33.2"
+typing-inspection = ">=0.4.0"
+python-multipart = ">=0.0.18"
+starlette = ">=0.40.0,<0.47.0"
+mycli = "==1.31.2"
+cli-helpers = ">=2.2.1"
+configobj = ">=5.0.5"
+tabulate = ">=0.9.0"
+wcwidth = "*"
+cryptography = ">=1.0.0"
+cffi = ">=1.14"
+pycparser = "*"
+prompt-toolkit = ">=3.0.6,<4.0.0"
+pyaes = ">=1.6.1"
+pyfzf = ">=0.3.1"
+pyperclip = ">=1.8.1"
+sqlglot = ">=5.1.3"
+sqlparse = ">=0.3.0,<0.6.0"
+openai = "==1.84.0"
+distro = ">=1.7.0,<2"
+jiter = ">=0.4.0,<1"
+tqdm = ">4"
+pydantic-settings = "==2.9.1"
+pymysql = "==1.1.1"
+sqlalchemy = "==2.0.41"
+greenlet = ">=1"
+mslex = ">=1.1.0,<2.0.0"
+psutil = ">=5.7.2,<7"
+tomli = ">=2.0.1,<3.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "==8.4.0"
@@ -101,4 +93,4 @@ post_test = "coverage html"
 devpush = "git push -u origin dev"
 mainpush = "git push -u origin main"
 scrap = "python src/webscrapping/main.py"
-see_db = 'mycli -u root -p -h localhost -D articlesdb"'
+see_db = 'mycli -u root -p -h localhost -D articlesdb'

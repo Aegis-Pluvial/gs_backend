@@ -2,16 +2,14 @@ from gs_backend.settings import Settings
 from urllib.request import urlopen
 from urllib.parse import quote
 from json import loads
-from datetime import datetime, timezone
 from webscrapping.utils import add_article
 from gs_backend.database import get_session
-
+from webscrapping.utils import get_articles
 session = next(get_session())
 
-data_hoje = (datetime.now(timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0)
-             .isoformat().replace('+00:00', 'Z'))
-
 api_key = Settings().api_key
+data = get_articles(session)
+breakpoint()
 
 query = quote(
     ('"enchente" AND ("mortes" OR "vítimas" OR "pessoas afetadas" OR "desabrigados" OR "danos" OR "prejuízo" OR '

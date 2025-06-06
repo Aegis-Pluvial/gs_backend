@@ -3,14 +3,14 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 
-# def get_lastDate(session: Session):
-#     data = session.scalars(select(ArticleDB).where(ArticleDB.published_at))
-#     return data
+def get_lastDate(session: Session):
+    data = session.scalars(select(ArticleDB).where(ArticleDB.published_at))
+    return data
 
 
-# def get_articles(session: Session):
-#     data = session.scalars(select(ArticleDB))
-#     return data
+def get_articles(session: Session):
+    data = session.scalars(select(ArticleDB)).all()
+    return data
 
 
 def add_article(article, session: Session):
@@ -19,3 +19,4 @@ def add_article(article, session: Session):
     session.add(article_db)
     session.commit()
     session.refresh(article_db)
+

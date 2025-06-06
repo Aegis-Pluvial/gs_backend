@@ -21,6 +21,6 @@ def read_api_root():
 @app.get('/api/articles', response_model=ArticlesList, status_code=200)
 # query_limit: int = 10 Cria um query
 # parameter personalizavel que tem como padrão 10 resultados
-def read_users(query_limit: int = 1, session=Depends(get_session)):
+def read_users(query_limit: int = 10, session=Depends(get_session)):
     article = session.scalars(select(ArticleDB).limit(limit=query_limit))
     return {'article': article}

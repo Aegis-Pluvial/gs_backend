@@ -1,6 +1,8 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+
 class Settings(BaseSettings):
+    AI_api_key: str
     api_key: str
     DATABASE_URL: str
     model_config = SettingsConfigDict(

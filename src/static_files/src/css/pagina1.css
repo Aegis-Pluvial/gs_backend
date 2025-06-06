@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', serif;
+}
+
+:root{
+    --color-light: #ffffff;
+    --color-blue: #6959c5;
+    --transition: .5s;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-light);
+    font-weight: 900;
+    transition: var(--transition);
+}
+
+img{
+    max-width: 100%;
+}
+
+.btn{
+    background-color: var(--color-blue);
+    border: 2px solid var(--color-blue);
+    padding: 8px 3.5rem;
+    border-radius: 5px;
+    color: var(--color-light);
+    transition: var(--transition);
+
+}
+
+.btn:hover{
+    background-color: rgb(238, 238, 238);
+    color: var(--color-blue);
+}
+
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(
+    rgba(4, 9, 30, 0.3),
+    rgba(4, 9, 30, 0.9)
+    ),
+    url(../assets/imgs/emcasa.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content{
+    width: 60%;
+    padding: 5rem;
+    color: var(--color-light);
+}
+
+.hero-content h2{
+    font-size: 7vmin;
+}
+
+.hero-content p{
+    margin-top: 3.5%;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    line-height: 3rem;
+}
+
+#hotel-title{
+    border: 1px solid #e6e4e4;
+    font-size: 5vmin;
+    text-align: center;
+    margin: 2rem 0 1rem;
+    padding: 1rem;
+    color: var(--color-blue);
+    background-color: rgb(230, 227, 227);
+}
+
+.hotel-list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.hotel-item {
+  border: 1.5px solid transparent;
+  width: 28%;
+  margin: 3rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-shadow: 2px 1px 30px #acacac;
+  border-radius: 5px;
+  transition: var(--transition);
+}
+
+.hotel-item:hover {
+    border: 1.5px solid var(--color-blue);
+    transition: .8s;
+}
+
+.hotel-item img {
+  width: 90%;
+  border-radius: 5px;
+}
+
+.hotel-item h3 {
+  margin: 2rem 0;
+  font-weight: 800;
+}
+
+.hotel-item p {
+  margin: 0 0 3rem;
+  width: 80%;
+}

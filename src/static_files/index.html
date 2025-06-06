@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aegis Pluvial</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="shortcut icon" href="src/assets/favicon.ico" />
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <!-- Libras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+     <!-- fim das libras -->
+
+     <!-- Navbar -->
+    <header>
+      <img src="src/assets/LogoAegisPluvial.png" alt="logo" />
+
+      
+
+      <div class="hamburguer">
+        <button id="festa"><img src="src/assets/Ball.png" alt="Botão para festa na pagina"></button>
+        <button id="mudar-cor"><img src="src/assets/Lua.png" alt="Botão para mudar a cor da pagina" id="mudar-imagem"></button>
+        <button onclick="toggleNav()">
+          <img src="src/assets/menu.png" alt="hamburguer" />
+        </button>
+      </div>
+    </header>
+    <div class="nav-menu">
+      <nav>
+        <a href="#">Solução</a>
+        <a href="#">Tecnologias</a>
+        <a href="#">Objetivo</a>
+        <a href="#">Benefícios</a>
+        <a href="#">Eficiência</a>
+        <a href="#">Público-alvo</a>
+      </nav>
+    </div>
+    <!-- fim da navbar -->
+
+    <!-- Video -->
+    <div class="video">
+      <video
+        src="src/assets/Vídeo_Pronto_Feedback_Sobre_Pedido.mp4"
+        controls
+      ></video>
+    </div>
+    <!-- Fim do video -->
+
+    <!-- Solução  -->
+  <div class="background2">
+    <div class="titulo-solucao">
+      <h1>Nossa Solução</h1>
+    </div>
+    
+    <section id="solucoes" class="secao-solucoes">
+
+
+        <div class="grade-solucoes">
+          <div class="cartao-solucao">
+            <div class="cabecalho-cartao-solucao bg-gradiente-principal">
+              <div class="icone-cartao-solucao">
+                <i class="fas fa-satellite-dish icone-grande"><img src="./src/assets/IconeSensor.png" alt="sensor"></i>
+              </div>
+              <h3 class="titulo-cartao-solucao">Sensores Inteligentes</h3>
+            </div>
+            <div class="corpo-cartao-solucao">
+              <p class="texto-cartao-solucao">
+                Redes de sensores de última geração que monitoram em tempo real
+                os níveis de água em rios, canais e pontos críticos das cidades.
+              </p>
+              <ul class="lista-beneficios-solucao">
+                <li class="item-beneficio-solucao">
+                  <i class="fas fa-check-circle icone-check"></i>
+                  <span>Transmissão de dados em tempo real</span>
+                </li>
+                <li class="item-beneficio-solucao">
+                  <i class="fas fa-check-circle icone-check"></i>
+                  <span>Baixo consumo de energia</span>
+                </li>
+                <li class="item-beneficio-solucao">
+                  <i class="fas fa-check-circle icone-check"></i>
+                  <span>Resistentes a condições extremas</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cartao-solucao">
+            <div class="cabecalho-cartao-solucao bg-gradiente-destaque">
+              <div class="icone-cartao-solucao">
+                <i class="fas fa-bell icone-grande"><img src="src/assets/iconeAlarme.png" alt="icone alerta"></i>
+              </div>
+              <h3 class="titulo-cartao-solucao">Sistema de Alerta</h3>
+            </div>
+            <div class="corpo-cartao-solucao">
+              <p class="texto-cartao-solucao">
+                Plataforma integrada de alertas que notifica órgãos públicos e a
+                população com antecedência sobre situações de risco iminente.
+              </p>
+              <ul class="lista-beneficios-solucao">
+                <li class="item-beneficio-solucao">
+                  <i class="fas fa-check-circle icone-check"></i>
+                  <span>SMS e notificações em aplicativos</span>
+                </li>
+                <li class="item-beneficio-solucao">
+                  <i class="fas fa-check-circle icone-check"></i>
+                  <span>Integração com sirenes urbanas</span>
+                </li>
+                <li class="item-beneficio-solucao">
+                  <i class="fas fa-check-circle icone-check"></i>
+                  <span>Rotas de evacuação sugeridas</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cartao-solucao">
+            <div class="cabecalho-cartao-solucao bg-gradiente-verde">
+              <div class="icone-cartao-solucao">
+                <i class="fas fa-map-marked-alt icone-grande"><img src="src/assets/iconeMapa.png" alt="mapaIcone"></i>
+              </div>
+              <h3 class="titulo-cartao-solucao">Mapas Preditivos</h3>
+            </div>
+            <div class="corpo-cartao-solucao">
+              <p class="texto-cartao-solucao">
+                Modelos computacionais avançados que preveem áreas de alagamento
+                com base em dados meteorológicos e topográficos.
+              </p>
+              <ul class="lista-beneficios-solucao">
+                <li class="item-beneficio-solucao">
+                  <i class="fas fa-check-circle icone-check"></i>
+                  <span>Simulações para diferentes cenários</span>
+                </li>
+                <li class="item-beneficio-solucao">
+                  <i class="fas fa-check-circle icone-check"></i>
+                  <span>Atualizações em tempo real</span>
+                </li>
+                <li class="item-beneficio-solucao">
+                  <i class="fas fa-check-circle icone-check"></i>
+                  <span>Visualização intuitiva para tomada de decisão</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        </div>
+    </section>
+  </div>
+  <!-- fim da solução  -->
+
+  
+  <section class="tecnologia">
+    <h1 class="texto-tec">Tecnologias</h1>
+    
+    <div class="carousel-text-container"> 
+      <div class="carousel-section">
+        <div class="carousel-container">
+          <div class="carousel-wrapper" id="carousel">
+            <img src="src/assets/sensorAgua.webp" class="carousel-image" alt="Sensores de Água" data-slide="0">
+            <img src="src/assets/sensorAgua.webp" class="carousel-image" alt="Sistema IoT" data-slide="1">
+            <img src="src/assets/sensorAgua.webp" class="carousel-image" alt="Inteligência Artificial" data-slide="2">
+          </div>
+        
+          <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+          <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+        </div>
+      </div>
+      
+
+      <div class="text-section">
+        <div class="descricao" id="dynamic-text">
+          <h1 id="text-title">alguma coisa</h1>
+          <p id="text-content">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi fuga mollitia a ad error rem, inventore quos saepe dolor autem non itaque dolorem vero quidem sit voluptates porro quisquam magni.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="objetivos">
+    <h1 class="texto-tec">Objetivos</h1>
+    <div class="conteudoObjetivos">
+      <img src="src/assets/target.png" alt="target" class="imgObjetivo">
+      <div class="textoObjetivos">
+        <h1 class="text-title">
+          titulo 
+        </h1>
+          <p class="paragrafoObjetivos"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi corporis cum commodi architecto omnis sequi, aliquam nulla debitis illo deleniti officia ipsa recusandae saepe atque qui   dolorem deserunt rem nesciunt?</p>
+      </div>
+    </div>
+
+  <hr>
+  
+    <div class="conteudoObjetivos2">
+      <img src="src/assets/target.png" alt="target" class="imgObjetivo">
+      <div class="textoObjetivos">
+        <h1 class="text-title">
+          titulo 
+        </h1>
+          <p class="paragrafoObjetivos"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi corporis cum commodi architecto omnis sequi, aliquam nulla debitis illo deleniti officia ipsa recusandae saepe atque qui   dolorem deserunt rem nesciunt?</p>
+      </div>
+    </div>
+    
+  </section>
+  
+
+
+
+
+
+    <script src="./src/js/index.js"></script>
+  </body>
+</html>

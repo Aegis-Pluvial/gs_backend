@@ -15,3 +15,7 @@ class Article(BaseModel):
 class ArticlesList(BaseModel):
     article: list[Article]
 
+
+class NewData(BaseModel):
+    deaths: int
+    public_money: float

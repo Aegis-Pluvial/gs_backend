@@ -9,7 +9,7 @@ class Base(DeclarativeBase):
 
 class ArticleDB(Base):
     __tablename__ = 'article'
-    title = sa.Column(sa.String, nullable=False, unique=True)
-    published_at = sa.Column(sa.String, nullable=False, unique=True)
-    description = sa.Column(sa.String, nullable=False, unique=True)
-    url = sa.Column(sa.String, nullable=False, unique=True)
+    title = sa.Column(sa.VARCHAR(500), nullable=False, unique=True)
+    published_at = sa.Column(sa.VARCHAR(500), nullable=False, unique=True)
+    description = sa.Column(sa.VARCHAR(500), nullable=False, unique=True)
+    url = sa.Column(sa.VARCHAR(500), nullable=False, unique=True)

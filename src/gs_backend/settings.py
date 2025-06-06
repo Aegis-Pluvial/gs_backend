@@ -2,6 +2,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 from pathlib import Path
 
 
+# Pydantic Settings. Monta um objeto Settings que facilita a extração de dados do dotenv
 class Settings(BaseSettings):
     AI_api_key: str
     api_key: str

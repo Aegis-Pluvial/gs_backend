@@ -1,16 +1,17 @@
-from gs_backend.models import ArticleDB
+from gs_backend.models import ArticleDB, StatusDB, AlarmDB
 from sqlalchemy import select
 from sqlalchemy.orm import Session
-
-
-def get_lastDate(session: Session):
-    data = session.scalars(select(ArticleDB).where(ArticleDB.published_at))
-    return data
+from gs_backend.schemas import StatusChange
 
 
 def get_articles(session: Session):
     data = session.scalars(select(ArticleDB)).all()
     return data
+
+
+def check_article(title: str, session: Session):
+    data = session.scalars(select(ArticleDB).where(ArticleDB.title == title))
+    return data.all()
 
 
 def add_article(article, session: Session):
@@ -20,3 +21,16 @@ def add_article(article, session: Session):
     session.commit()
     session.refresh(article_db)
 
+
+def add_status(session: Session, status: list):
+    status_db = StatusDB(deaths=status[1]['pessoas_mortas'], money=status[0]['dinheiro_publico'])
+    session.add(status_db)
+    session.commit()
+    session.refresh(status_db)
+
+
+def change_statusDB(session: Session, status: StatusChange):
+    status_db = session.scalar(select(AlarmDB).where(AlarmDB.id == 1))
+    status_db.status = status.change_status
+    session.commit()
+    session.refresh(status_db)

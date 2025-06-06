@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aegis Pluvial</title>
-    <link rel="stylesheet" href="./src/css/style.css" />
-    <link rel="shortcut icon" href="src/assets/favicon.ico" />
+    <link rel="stylesheet" href="/static/src/css/style.css" />
+    <link rel="shortcut icon" href="/static/src/assets/favicon.ico" />
     <style>
       
     </style>
@@ -26,42 +26,56 @@
 
      <!-- Navbar -->
     <header>
-      <img src="src/assets/LogoAegisPluvial.png" alt="logo" />
+      <img src="/static/src/assets/LogoAegisPluvial.png" alt="logo" />
 
       
 
       <div class="hamburguer">
-        <button id="festa"><img src="src/assets/Ball.png" alt="Botão para festa na pagina"></button>
-        <button id="mudar-cor"><img src="src/assets/Lua.png" alt="Botão para mudar a cor da pagina" id="mudar-imagem"></button>
+        <button id="festa"><img src="/static/src/assets/Ball.png" alt="Botão para festa na pagina"></button>
+        <button id="mudar-cor"><img src="/static/src/assets/Lua.png" alt="Botão para mudar a cor da pagina" id="mudar-imagem"></button>
         <button onclick="toggleNav()">
-          <img src="src/assets/menu.png" alt="hamburguer" />
+          <img src="/static/src/assets/menu.png" alt="hamburguer" />
         </button>
       </div>
     </header>
     <div class="nav-menu">
       <nav>
-        <a href="#">Solução</a>
-        <a href="#">Tecnologias</a>
-        <a href="#">Objetivo</a>
-        <a href="#">Benefícios</a>
-        <a href="#">Eficiência</a>
-        <a href="#">Público-alvo</a>
+        <a href="#solucaott">Solução</a>
+        <a href="#tec">Tecnologias</a>
+        <a href="#objetivos">Objetivo</a>
+        <a href="#bene">Benefícios</a>
+        <a href="#efic">Eficiência</a>
+        <a href="#publi">Público-alvo</a>
+        <a href="./src/pages/quiz.html">Quiz</a>
       </nav>
     </div>
     <!-- fim da navbar -->
 
-    <!-- Video -->
-    <div class="video">
-      <video
-        src="src/assets/Vídeo_Pronto_Feedback_Sobre_Pedido.mp4"
-        controls
-      ></video>
+  <div id="first_screen">
+  <div class="container">
+    <h1 class="titulo-principal">Aegis Pluvial</h1>
+    <p class="subtitulo-principal">
+      Protegendo vidas e patrimônios contra enchentes...
+    </p>
+    <p class="subtitulo-principal">
+      Dados atualizados em tempo real
+    </p>
+    <div class="dados-enchentes">
+      <div class="dado">
+        <span class="dado-valor" id="mortos-enchentes">2.500+</span>
+        <span class="dado-label">Pessoas mortas por enchentes<br><small>(Brasil, últimos 10 anos)</small></span>
+      </div>
+      <div class="dado">
+        <span class="dado-valor" id="dinheiro-gasto">R$ 5 bilhões</span>
+        <span class="dado-label">Dinheiro público gasto<br><small>(Prevenção e recuperação)</small></span>
+      </div>
     </div>
-    <!-- Fim do video -->
+    </div>
+</div>
 
-    <!-- Solução  -->
-  <div class="background2">
-    <div class="titulo-solucao">
+
+    <div class="background2">
+    <div class="titulo-solucao" id="solucaott">
       <h1>Nossa Solução</h1>
     </div>
     
@@ -72,7 +86,7 @@
           <div class="cartao-solucao">
             <div class="cabecalho-cartao-solucao bg-gradiente-principal">
               <div class="icone-cartao-solucao">
-                <i class="fas fa-satellite-dish icone-grande"><img src="./src/assets/IconeSensor.png" alt="sensor"></i>
+                <i class="fas fa-satellite-dish icone-grande"><img src="/static/src/assets/IconeSensor.png" alt="sensor"></i>
               </div>
               <h3 class="titulo-cartao-solucao">Sensores Inteligentes</h3>
             </div>
@@ -101,7 +115,7 @@
           <div class="cartao-solucao">
             <div class="cabecalho-cartao-solucao bg-gradiente-destaque">
               <div class="icone-cartao-solucao">
-                <i class="fas fa-bell icone-grande"><img src="src/assets/iconeAlarme.png" alt="icone alerta"></i>
+                <i class="fas fa-bell icone-grande"><img src="/static/src/assets/iconeAlarme.png" alt="icone alerta"></i>
               </div>
               <h3 class="titulo-cartao-solucao">Sistema de Alerta</h3>
             </div>
@@ -127,10 +141,11 @@
             </div>
           </div>
 
+
           <div class="cartao-solucao">
             <div class="cabecalho-cartao-solucao bg-gradiente-verde">
               <div class="icone-cartao-solucao">
-                <i class="fas fa-map-marked-alt icone-grande"><img src="src/assets/iconeMapa.png" alt="mapaIcone"></i>
+                <i class="fas fa-map-marked-alt icone-grande"><img src="/static/src/assets/iconeMapa.png" alt="mapaIcone"></i>
               </div>
               <h3 class="titulo-cartao-solucao">Mapas Preditivos</h3>
             </div>
@@ -156,22 +171,56 @@
             </div>
           </div>
         </div>
+        
+        </div>
+        
+        <div class="mapaSP">
+          <h1>Mapa ilustrativo</h1>
+          <p>clique no botão abaixo para abrir</p>
+          <button id="sumir" onclick="abrirInterface()">Solução</button >
+          
+          <div class="mapa-sp" id="solucao1" onclick="fecharInterface">
+            <div class="columns">
+              <div class="imagemSp">
+                <img src="/static/src/assets/saopaulo.webp" alt="mapa de São paulo" />
+                <br /><br />
+                <button class="close" onclick="fecharInterface()">Fechar</button id="fechar" >
+              </div>
+    
+
+              
+              <div class="textobotao">
+                <div class="botao1">
+                <button onclick="mostrarTexto(1)">Zona leste</button>
+              </div>
+              <div class="botao2">
+                <button onclick="mostrarTexto(2)">Zona Sul</button>
+              </div>
+              <div class="botao3">
+                <button onclick="mostrarTexto(3)">Zona Norte</button>
+              </div>
+                <div class="text-area" id="textoArea">
+                  Clique para saber as estatisticas das areas mencionadas
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
     </section>
   </div>
   <!-- fim da solução  -->
 
   
-  <section class="tecnologia">
+  <section class="tecnologia" id="tec">
     <h1 class="texto-tec">Tecnologias</h1>
     
     <div class="carousel-text-container"> 
       <div class="carousel-section">
         <div class="carousel-container">
           <div class="carousel-wrapper" id="carousel">
-            <img src="src/assets/sensorAgua.webp" class="carousel-image" alt="Sensores de Água" data-slide="0">
-            <img src="src/assets/sensorAgua.webp" class="carousel-image" alt="Sistema IoT" data-slide="1">
-            <img src="src/assets/sensorAgua.webp" class="carousel-image" alt="Inteligência Artificial" data-slide="2">
+            <img src="/static/src/assets/sensorAgua.webp" class="carousel-image" alt="Sensores de Água" data-slide="0">
+            <img src="/static/src/assets/alertaEnchente.webp" class="carousel-image" alt="Sistema alerta" data-slide="1">
+            <img src="/static/src/assets/mapeamentoSP.jpg" class="carousel-image" alt="Inteligência Artificial" data-slide="2">
           </div>
         
           <button class="arrow left" onclick="prevSlide()">&#10094;</button>
@@ -194,7 +243,7 @@
   <section id="objetivos">
     <h1 class="texto-tec">Objetivos</h1>
     <div class="conteudoObjetivos">
-      <img src="src/assets/target.png" alt="target" class="imgObjetivo">
+      <img src="/static/src/assets/target.png" alt="target" class="imgObjetivo">
       <div class="textoObjetivos">
         <h1 class="text-title">
           titulo 
@@ -204,9 +253,9 @@
     </div>
 
   <hr>
-  
+
     <div class="conteudoObjetivos2">
-      <img src="src/assets/target.png" alt="target" class="imgObjetivo">
+      <img src="/static/src/assets/target.png" alt="target" class="imgObjetivo">
       <div class="textoObjetivos">
         <h1 class="text-title">
           titulo 
@@ -216,12 +265,98 @@
     </div>
     
   </section>
-  
+ 
 
 
+  <section class="beneficiosSection" id="bene">
 
+    <div class="header-beneficios">
+    <h1>
+      Beneficios
+    </h1>
+  </div>
+  <div class="beneficios">
+    <img src="/static/src/assets/benefits.png" alt="handle" class="imgbeneficios">
+    <div class="textobeneficios">
+      <h1 class="text-title">
+        Os beneficios da Nossa solução 
+      </h1>
+        <p class="paragrafoObjetivos"> •Redução de danos materiais </p>
+        <p class="paragrafoObjetivos"> •Saúde e bem-estar </p>
+        <p class="paragrafoObjetivos"> •Segurança e tranquilidade </p>
+        <p class="paragrafoObjetivos"> •Fortalecimento da infraestrutura </p>
+    </div>
+  </section>
+  </div>
 
+<h1 class="texto-tec">Eficiência</h1>
 
-    <script src="./src/js/index.js"></script>
+<section class="Eficiencia" id="efic">
+    
+    <div class="cards">
+      <div class="cardEficiencia">
+        <img src="/static/src/assets/iconeAlarme.png" alt="Ícone de Otimização do Tempo" class="imgEficiencia">
+        <h3 class="titulo-cartao-eficiencia">Otimização do Tempo</h3>
+        <p class="texto-cartao-solucao">Nossa automação reduz tarefas manuais e agiliza a tomada de decisão, devolvendo horas preciosas para sua equipe focar no que realmente importa.</p>
+      </div>
+
+      <div class="cardEficiencia">
+        <img src="/static/src/assets/resource-allocation.png" alt="Ícone de Otimização de Recursos" class="imgEficiencia">
+        <h3 class="titulo-cartao-eficiencia">Otimização de Recursos</h3>
+        <p class="texto-cartao-solucao">Com dados precisos, você aloca recursos de forma inteligente, evitando desperdícios e garantindo que cada investimento tenha o máximo retorno.</p>
+      </div>
+
+      <div class="cardEficiencia">
+        <img src="/static/src/assets/iconeAlarme.png" alt="Ícone de Otimização de Processos" class="imgEficiencia">
+        <h3 class="titulo-cartao-eficiencia">Otimização de Processos</h3>
+        <p class="texto-cartao-solucao">Padronize suas operações com alertas antecipados e rotas de ação claras, minimizando erros, retrabalho e o impacto de eventos críticos.</p>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <section class="publico" id="publi">
+    <h1 class="titulo-publico">Público-alvo</h1>
+    <p class="paragrafoPubli">Quem é o nosso publico alvo?</p>
+    <h2 class="h2publi">Nosso público-alvo são as pessoas que sofrem com as enchentes. São famílias, trabalhadores e comunidades inteiras que enfrentam desafios causados pelos alagamentos, desde a perda de bens até a necessidade de recomeçar do zero. Nosso compromisso é oferecer apoio, soluções e esperança para aqueles que vivem essa realidade.
+      Nosso lema é claro: ajudá-las. Queremos ser uma fonte de informação, suporte e inovação para minimizar os impactos das enchentes e auxiliar na reconstrução da vida dessas pessoas.</h2>
+      <p class="paragrafoPubli">para que cenas como essas não aconteça novamente:</p>
+      <iframe class="videopubli" width="560" height="315" src="https://www.youtube.com/embed/8SCz7i8F4aM" 
+frameborder="0" allowfullscreen></iframe>
+      <!-- Video -->
+    <div class="video">
+      <video
+        src="/static/src/assets/Vídeo_Pronto_Feedback_Sobre_Pedido.mp4"
+        controls
+      ></video>
+    </div>
+  </section>
+  <footer>
+    <img src="/static/src/assets/LogoAegisPluvial.png" alt="logo" />
+    <div class="row">
+    <div class="Integrantes">
+      <h1>Integrantes</h1>
+      <ul>
+        <li>Enzo Brincalepe</li>
+        <li>João Piccolo</li>
+        <li>Luccas Figueira</li>
+      </ul>
+    </div>
+    <div class="links">
+      <h1>Links</h1>
+      <ul>
+        <li><a href="#solucaott">Solução</a></li>
+        <li><a href="#tec">Tecnologias</a></li>
+        <li><a href="#objetivos">Objetivo</a></li>
+        <li><a href="#bene">Benefícios</a></li>
+        <li><a href="#efic">Eficiência</a></li>
+        <li><a href="#publi">Público-alvo</a></li>
+        <li><a href="./src/pages/quiz.html">Quiz</a></li>
+      </ul>
+    </div>
+    </div>
+    <p>&copy todos os direitos reservados</p>
+  </footer>
+      
+    <script src="/static/src/js/index.js"></script>
   </body>
 </html>

@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #e2e1de;
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+  transition: background-color 1s ease;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  height: 94px;
+  background-color: #1d3557;
+  flex-wrap: wrap;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+header img {
+  max-height: 78px;
+  width: auto;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.cards{
+    padding: 10px;
+    width: 600px;
+}
+form{
+    padding: 10px;
+    width: 500px;
+}
+input{
+    margin: 6px 0px;
+}
+#botao-enviar{
+    width: 100%;
+    color: #fff;
+    font-size: large;
+    font-weight: 800;
+    background-color: #0786b1;
+    height: 45px;
+    border-radius: 8px;
+}
+.final{
+    margin: 40px 0px 20px 0px;
+}
+#resultado{
+    font-size: large;
+    font-weight: 400;
+    color: #951717;
+}

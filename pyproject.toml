@@ -12,7 +12,8 @@ dependencies = [
     "httpx (>=0.28.1,<0.29.0)",
     "sqlalchemy (>=2.0.41,<3.0.0)",
     "openai (>=1.84.0,<2.0.0)",
-    "pymysql (>=1.1.1,<2.0.0)"
+    "pymysql (>=1.1.1,<2.0.0)",
+    "mycli (>=1.31.2,<2.0.0)"
 ]
 
 [tool.poetry]
@@ -35,6 +36,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.taskipy.tasks]
 run = 'fastapi dev src/gs_backend/main.py --port 8000'
+uvicorn = "uvicorn gs_backend.main:app --port 8000"
 run_lan = 'fastapi dev src/gs_backend/main.py --host 0.0.0.0'
 test = 'pytest --cov=src/gs_backend -vv'
 htmlcov = 'start "C:\Users\janj\AppData\Local\Programs\Opera GX\opera.exe" C:\Users\janj\gs_backend\htmlcov\index.html'
@@ -42,3 +44,4 @@ post_test = 'coverage html'
 devpush = "git push -u origin dev"
 mainpush = "git push -u origin main"
 scrap = 'python src/webscrapping/main.py'
+see_db = 'mycli -u root -p -h localhost -D articlesdb"'

@@ -23,7 +23,7 @@ gs_backend/
 │   └── webscrapping/
 │       ├── __init__.py
 │       ├── utils.py          # Funções utilitárias para scraping
-│       ├── daily_scraper.py  # Script para automação diária de scraping
+│       ├── main.py  # Script para automação diária de scraping
 │       └── ...               # Outros scripts de scraping
 │
 └── tests/                    # Testes automatizados
@@ -62,13 +62,30 @@ gs_backend/
 
 4. **Rode a API**
     ```sh
-    uvicorn src.gs_backend.main:app --reload
+    uvicorn src.gs_backend.main:app
     ```
 
 5. **Execute o scraping diário**
     ```sh
-    python src/webscrapping/daily_scraper.py
+    python src/webscrapping/main.py
     ```
+
+## Comandos `taskipy`
+
+Você pode usar os seguintes comandos no `pyproject.toml` com `taskipy`:
+
+```toml
+[tool.taskipy.tasks]
+run = 'fastapi dev src/gs_backend/main.py --port 8000'
+uvicorn = 'uvicorn gs_backend.main:app --port 8000'
+run_lan = 'fastapi dev src/gs_backend/main.py --host 0.0.0.0'
+test = 'pytest --cov=src/gs_backend -vv'
+post_test = 'coverage html'
+devpush = 'git push -u origin dev'
+mainpush = 'git push -u origin main'
+scrap = 'python src/webscrapping/main.py'
+see_db = 'mycli -u root -p -h localhost -D articlesdb'
+````
 
 ## Testes
 
@@ -88,6 +105,3 @@ pytest
 MIT
 
 ---
-
-> **Dica:**  
-> Adapte este README conforme as particularidades do seu projeto e atualize a estrutura de pastas se necessário.

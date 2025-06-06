@@ -32,7 +32,7 @@ gs_backend/
 ## Principais Funcionalidades
 
 - **API RESTful** com FastAPI para gerenciamento de artigos.
-- **Banco de dados** via SQLAlchemy (SQLite/MySQL, configurável via `.env`).
+- **Banco de dados** via SQLAlchemy (SQLite/MySQL/Postgree, configurável via `.env`).
 - **Webscraping** automatizado com scripts em `src/webscrapping/`.
 - **Agendamento** de tarefas de scraping (exemplo: 100 requisições diárias).
 - **Configuração centralizada** via arquivo `.env`.

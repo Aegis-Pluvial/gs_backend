@@ -1,5 +1,7 @@
 # GS Backend
 
+LINK VIDEO: https://youtu.be/l8J2zlQJnng
+
 Backend para O Site Aegis-Pluvial. 
 
 Atualização em Tempo Real Gerenciamento de artigos, webscraping e API RESTful.

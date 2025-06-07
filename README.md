@@ -6,11 +6,11 @@ Atualização em Tempo Real Gerenciamento de artigos, webscraping e API RESTful.
 ## Estrutura do Projeto
 
 ---
-# Equipes
+# Equipe
 
-Joao Vitor Piccolo - RM: 565127
-Luccas Figueira - RM:564240
-Enzo Brincalepe -  RM:562296
+### Joao Vitor Piccolo - RM: 565127
+### Luccas Figueira - RM:564240
+### Enzo Brincalepe -  RM:562296
 
 
 ---

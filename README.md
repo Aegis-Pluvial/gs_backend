@@ -5,6 +5,16 @@ Backend para O Site Aegis-Pluvial.
 Atualização em Tempo Real Gerenciamento de artigos, webscraping e API RESTful.
 ## Estrutura do Projeto
 
+---
+# Equipes
+
+Joao Vitor Piccolo - RM: 565127
+Luccas Figueira - RM:564240
+Enzo Brincalepe -  RM:562296
+
+
+---
+
 ```
 gs_backend/
 │
@@ -100,6 +110,7 @@ pytest
 - O caminho do banco de dados no `.env` deve ser absoluto para evitar múltiplos arquivos.
 - Scripts de scraping podem ser agendados via cron (Linux) ou Task Scheduler (Windows).
 - Ajuste as URLs e chaves conforme seu ambiente.
+---
 
 ## Licença
 

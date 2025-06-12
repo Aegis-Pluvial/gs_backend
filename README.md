@@ -1,19 +1,9 @@
 # GS Backend
 
-LINK VIDEO: https://youtu.be/l8J2zlQJnng
-
 Backend para O Site Aegis-Pluvial. 
 
 Atualização em Tempo Real Gerenciamento de artigos, webscraping e API RESTful.
 ## Estrutura do Projeto
-
----
-# Equipe
-
-### Joao Vitor Piccolo - RM: 565127
-### Luccas Figueira - RM:564240
-### Enzo Brincalepe -  RM:562296
-
 
 ---
 
